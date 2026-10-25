@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "StillTempo",
+  "short_name": "StillTempo",
+  "description": "A quietly witty new tab with Workspace and Lounge, curated wallpapers, Jazz and Lo-fi, focus tools, weather and the Hitlist.",
+  "version": "1.0",
+  "minimum_chrome_version": "116",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "search",
+    "alarms",
+    "offscreen",
+    "notifications",
+    "favicon"
+  ],
+  "host_permissions": [
+    "https://vellune-unsplash.vivek-verma-eaf.workers.dev/*",
+    "https://images.unsplash.com/*",
+    "https://icanhazdadjoke.com/*",
+    "https://api.open-meteo.com/*",
+    "https://geocoding-api.open-meteo.com/*",
+    "https://get.geojs.io/*",
+    "https://streaming.smartradio.ch/*",
+    "https://443-1.autopo.st/*",
+    "https://streams.dez.ovh/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' https://images.unsplash.com data:; media-src 'self' https://streaming.smartradio.ch:8510 https://streams.dez.ovh https://443-1.autopo.st"
+  }
+}

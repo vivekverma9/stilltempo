@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>New Tab · Another tab? Naturally.</title>
+ <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="workspace">
+ <div class="wallpaper" id="wallpaper" aria-hidden="true"></div><div class="wallpaper wallpaper-next" id="wallpaper-next" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div>
+ <!-- Decorative extension-owned light. All native Chrome toolbar pixels remain untouched. -->
+ <div class="ambient-crown" id="ambient-crown" aria-hidden="true">
+  <div class="halo-horizon"></div>
+  <div class="halo-spill"></div>
+  <svg class="corona" viewBox="0 0 640 180" preserveAspectRatio="none" focusable="false" aria-hidden="true">
+   <defs>
+    <linearGradient id="stilltempo-downlight" x1="0" y1="0" x2="0" y2="180" gradientUnits="userSpaceOnUse">
+     <stop offset="0" stop-color="currentColor" stop-opacity=".64"/>
+     <stop offset=".34" stop-color="currentColor" stop-opacity=".33"/>
+     <stop offset=".75" stop-color="currentColor" stop-opacity=".08"/>
+     <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="stilltempo-ray-blur" x="-30%" y="-15%" width="160%" height="145%" color-interpolation-filters="sRGB">
+     <feGaussianBlur stdDeviation="5.8"/>
+    </filter>
+   </defs>
+   <g class="corona-beams" fill="none" stroke="url(#stilltempo-downlight)" stroke-linecap="round" filter="url(#stilltempo-ray-blur)">
+    <path class="corona-beam" d="M 112.0 -5 C 112.8 24, 114.0 71, 114.5 115" stroke-width="18" style="--beam-period:4.93s;--beam-delay:-3.36s;--beam-strength:0.7"/>
+    <path class="corona-beam" d="M 128.0 -5 C 126.0 24, 122.8 94, 121.5 151" stroke-width="16" style="--beam-period:4.53s;--beam-delay:-0.49s;--beam-strength:0.73"/>
+    <path class="corona-beam" d="M 144.0 -5 C 144.4 24, 145.1 87, 145.4 140" stroke-width="15" style="--beam-period:5.82s;--beam-delay:-1.9s;--beam-strength:0.47"/>
+    <path class="corona-beam" d="M 160.0 -5 C 161.3 24, 163.4 68, 164.2 110" stroke-width="10" style="--beam-period:4.2s;--beam-delay:-2.45s;--beam-strength:0.85"/>
+    <path class="corona-beam" d="M 176.0 -5 C 176.6 24, 177.7 99, 178.1 159" stroke-width="18" style="--beam-period:4.63s;--beam-delay:-2.88s;--beam-strength:0.68"/>
+    <path class="corona-beam" d="M 192.0 -5 C 190.0 24, 186.8 106, 185.5 171" stroke-width="18" style="--beam-period:3.62s;--beam-delay:-1.88s;--beam-strength:0.4"/>
+    <path class="corona-beam" d="M 208.0 -5 C 208.7 24, 209.7 93, 210.2 150" stroke-width="10" style="--beam-period:5.05s;--beam-delay:-1.01s;--beam-strength:0.56"/>
+    <path class="corona-beam" d="M 224.0 -5 C 224.1 24, 224.3 66, 224.4 106" stroke-width="9" style="--beam-period:5.6s;--beam-delay:-0.98s;--beam-strength:0.75"/>
+    <path class="corona-beam" d="M 240.0 -5 C 240.8 24, 242.2 105, 242.8 169" stroke-width="19" style="--beam-period:5.66s;--beam-delay:-2.81s;--beam-strength:0.54"/>
+    <path class="corona-beam" d="M 256.0 -5 C 256.9 24, 258.4 102, 259.0 165" stroke-width="11" style="--beam-period:3.62s;--beam-delay:-2.78s;--beam-strength:0.42"/>
+    <path class="corona-beam" d="M 272.0 -5 C 271.8 24, 271.4 64, 271.3 104" stroke-width="13" style="--beam-period:4.88s;--beam-delay:-0.4s;--beam-strength:0.71"/>
+    <path class="corona-beam" d="M 288.0 -5 C 287.3 24, 286.2 66, 285.8 107" stroke-width="10" style="--beam-period:5.9s;--beam-delay:-0.29s;--beam-strength:0.48"/>
+    <path class="corona-beam" d="M 304.0 -5 C 304.0 24, 304.1 84, 304.1 135" stroke-width="17" style="--beam-period:3.84s;--beam-delay:-0.12s;--beam-strength:0.49"/>
+    <path class="corona-beam" d="M 320.0 -5 C 321.6 24, 324.2 75, 325.3 121" stroke-width="12" style="--beam-period:3.32s;--beam-delay:-0.75s;--beam-strength:0.68"/>
+    <path class="corona-beam" d="M 336.0 -5 C 336.2 24, 336.5 65, 336.6 105" stroke-width="14" style="--beam-period:3.8s;--beam-delay:-2.54s;--beam-strength:0.43"/>
+    <path class="corona-beam" d="M 352.0 -5 C 353.1 24, 354.8 96, 355.6 155" stroke-width="16" style="--beam-period:3.92s;--beam-delay:-0.87s;--beam-strength:0.86"/>
+    <path class="corona-beam" d="M 368.0 -5 C 366.1 24, 362.9 83, 361.7 134" stroke-width="16" style="--beam-period:5.6s;--beam-delay:-3.16s;--beam-strength:0.57"/>
+    <path class="corona-beam" d="M 384.0 -5 C 384.2 24, 384.6 68, 384.7 109" stroke-width="17" style="--beam-period:4.95s;--beam-delay:-0.89s;--beam-strength:0.86"/>
+    <path class="corona-beam" d="M 400.0 -5 C 399.2 24, 397.8 64, 397.2 104" stroke-width="13" style="--beam-period:4.68s;--beam-delay:-3.93s;--beam-strength:0.52"/>
+    <path class="corona-beam" d="M 416.0 -5 C 418.0 24, 421.2 82, 422.5 132" stroke-width="14" style="--beam-period:5.87s;--beam-delay:-3.72s;--beam-strength:0.57"/>
+    <path class="corona-beam" d="M 432.0 -5 C 430.8 24, 428.7 93, 427.9 150" stroke-width="10" style="--beam-period:5.46s;--beam-delay:-2.19s;--beam-strength:0.43"/>
+    <path class="corona-beam" d="M 448.0 -5 C 447.8 24, 447.4 78, 447.3 125" stroke-width="19" style="--beam-period:5.31s;--beam-delay:-3.23s;--beam-strength:0.54"/>
+    <path class="corona-beam" d="M 464.0 -5 C 463.2 24, 462.0 103, 461.5 166" stroke-width="11" style="--beam-period:5.54s;--beam-delay:-3.3s;--beam-strength:0.55"/>
+    <path class="corona-beam" d="M 480.0 -5 C 479.8 24, 479.5 71, 479.4 115" stroke-width="16" style="--beam-period:5.14s;--beam-delay:-0.78s;--beam-strength:0.74"/>
+    <path class="corona-beam" d="M 496.0 -5 C 496.7 24, 498.0 80, 498.5 129" stroke-width="11" style="--beam-period:3.46s;--beam-delay:-4.28s;--beam-strength:0.8"/>
+    <path class="corona-beam" d="M 512.0 -5 C 510.6 24, 508.3 73, 507.4 117" stroke-width="13" style="--beam-period:4.39s;--beam-delay:-0.44s;--beam-strength:0.86"/>
+    <path class="corona-beam" d="M 528.0 -5 C 527.4 24, 526.4 64, 526.0 104" stroke-width="11" style="--beam-period:3.96s;--beam-delay:-2.92s;--beam-strength:0.78"/>
+   </g>
+  </svg>
+ </div>
+ <main class="dashboard" aria-label="StillTempo dashboard">
+  <header class="clock" aria-label="Time and greeting">
+   <div class="time-line"><span class="time-face"><span id="hours">--</span><span class="clock-colon" aria-hidden="true">:</span><span id="minutes">--</span></span><span id="ampm" class="ampm"></span></div>
+   <p class="greeting" id="greeting"></p>
+  </header>
+  <section class="radio glass" id="radio-panel" aria-label="Internet radio" title="A little atmosphere, without the fuss.">
+   <div class="radio-main">
+    <button id="radio-play" class="round" type="button" aria-label="Play radio" title="Play or pause">▶</button>
+    <div class="radio-text"><a id="radio-name" href="https://relaxingjazz.com/listen/" target="_blank" rel="noopener noreferrer" title="Open the station website">RelaxingJazz</a><span class="radio-subline"><span class="radio-beat" aria-hidden="true"><i></i><i></i><i></i></span><span class="small radio-state" id="radio-state">Idle</span></span></div>
+    <div class="segmented station-switch" role="group" aria-label="Radio station"><button type="button" data-station="jazz" class="selected" aria-pressed="true" title="Jazz station"><span aria-hidden="true">♬</span> Jazz</button><button type="button" data-station="lofi" aria-pressed="false" title="Lofi station"><span aria-hidden="true">☾</span> Lofi</button></div>
+    <div class="radio-volume-wrap"><label class="visually-hidden" for="radio-volume">Radio volume</label><span class="volume-glyph" aria-hidden="true">♪</span><input type="range" id="radio-volume" min="0" max="100" value="55" aria-label="Radio volume" title="Volume: 55%"></div>
+   </div>
+   <p id="radio-jibe" class="radio-jibe" aria-label="Music punchline">The saxophone has booked your calendar. Again.</p>
+  </section>
+
+  <section class="central" aria-label="Search and shortcuts">
+   <form class="search glass" id="search-form" role="search"><span aria-hidden="true" class="search-mark">⌕</span><label class="visually-hidden" for="search">Ask the internet</label><input id="search" type="search" placeholder="Ask the internet..." spellcheck="false" autocomplete="off"><button aria-label="Search using browser default provider" title="Search">↵</button></form>
+   <nav id="shortcuts" class="shortcuts" aria-label="Shortcuts"></nav>
+  </section>
+
+  <section class="bottom-joke" id="joke" aria-label="Editorial joke">A fine day to pretend those tabs are research.</section>
+
+  <aside class="right-rail" aria-label="Weather, Hitlist and control centre">
+  <section class="weather" id="weather" aria-label="Weather">
+   <button id="weather-toggle" class="weather-head" aria-expanded="false"><span id="weather-icon" class="weather-icon">☁</span><span><strong id="weather-degrees">--°</strong><small id="weather-city">Choose a city</small></span></button>
+   <p id="weather-jibe">The clouds have declined to comment.</p>
+   <div class="weather-pop glass" id="weather-pop" hidden><form id="city-form"><label for="city-search">Find a city</label><div class="inline-form"><input id="city-search" placeholder="City or town" autocomplete="off"><button type="submit">Find</button></div></form><div id="city-results"></div><div id="forecast"></div><small id="weather-info">Forecast by Open-Meteo</small></div>
+  </section>
+  <section class="hitlist glass" aria-label="The Hitlist and focus timer"><h2>The Hitlist</h2><div class="task-list" id="task-list" aria-label="Hitlist tasks"></div><form id="task-form" class="task-add"><label class="visually-hidden" for="task-input">Add a target</label><input id="task-input" maxlength="240" placeholder="Add a target..." autocomplete="off"><button aria-label="Add target" title="Add">+</button></form>
+   <div class="hairline"></div><div class="focus-label"><h2>Focus</h2><small id="focus-kind">Work session</small></div>
+   <div class="timer-line"><div id="timer" class="timer" role="timer">25:00</div><button id="timer-toggle" class="round" aria-label="Start focus">▶</button><button id="timer-reset" class="flat icon-circle" aria-label="Reset focus" title="Reset to saved focus duration"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.4 11.2a8.6 8.6 0 1 1 2.2 6.5"/><path d="M3.5 4.8v6.7h6.6"/></svg></button></div>
+   <div class="focus-progress" id="focus-progress" role="progressbar" aria-label="Focus time remaining" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span id="focus-progress-fill"></span></div>
+   <div class="timer-controls"><div class="duration-stepper" role="group" aria-label="Set focus minutes"><button id="duration-less" type="button" aria-label="Decrease focus by five minutes" title="−5 minutes">−</button><label class="duration-field" for="duration"><input id="duration" type="number" inputmode="numeric" min="1" max="180" step="1" value="25" aria-label="Focus duration in minutes"><span>min</span></label><button id="duration-more" type="button" aria-label="Increase focus by five minutes" title="+5 minutes">+</button></div><button id="timer-break" type="button" class="flat">5m break ↗</button></div>
+   <div class="focus-presets" role="group" aria-label="Quick focus durations"><span>QUICK SET</span><button type="button" data-focus-preset="15">15</button><button type="button" data-focus-preset="25" class="selected">25</button><button type="button" data-focus-preset="45">45</button></div>
+   <small id="focus-status" role="status"></small>
+  </section>
+  <section class="control glass" aria-label="Control centre"><div class="modebar" role="group" aria-label="Appearance"><button data-mode="auto">☼ <span>Auto</span></button><button data-mode="workspace">▣ <span>Workspace</span></button><button data-mode="lounge">☾ <span>Lounge</span></button></div>
+   <div class="hairline"></div><div class="wall-controls"><button id="next-photo" title="Next photograph" aria-label="Next photograph" class="square">▧</button><button id="pin-photo" title="Pin or unpin photograph" aria-label="Pin photograph" class="square">♧</button><label for="blur">Blur</label><input type="range" id="blur" min="0" max="100" step="1"><span id="blur-value">15%</span><button id="open-settings" class="square" title="Settings" aria-label="Settings">⚙</button></div>
+   <div class="photo-credit" id="photo-credit">Photo by an Unsplash contributor</div><p id="wall-status" class="wall-status" aria-live="polite"></p>
+  </section>
+  </aside>
+ </main>
+ <dialog id="settings" class="settings glass" aria-labelledby="settings-heading">
+  <div class="settings-top"><div><div class="brand-lockup"><img src="icons/stilltempo-emblem.png" width="38" height="38" alt=""><small class="brand">StillTempo</small></div><h2 id="settings-heading">Make yourself at home.</h2></div><button id="close-settings" class="square" aria-label="Close settings">✕</button></div>
+  <div class="settings-scroll">
+   <section><h3>Appearance</h3><div class="settings-row"><label for="day-start">Workspace begins</label><input type="time" id="day-start"></div><div class="settings-row"><label for="lounge-start">Lounge begins</label><input type="time" id="lounge-start"></div><label class="checkbox"><input type="checkbox" id="clock24"> Use 24-hour clock</label><p class="hint">Auto follows your device clock. Manual choices stay until you select Auto again.</p></section>
+   <section><h3>Small pleasures</h3><label class="checkbox"><input type="checkbox" id="setting-weather"> Weather</label><label class="checkbox"><input type="checkbox" id="approximate"> Automatically estimate my city from my network (GeoJS; sends an IP-based lookup to the provider)</label><div class="settings-row"><small>Manual city selection takes priority.</small><button id="reset-city" class="soft">Use approximate location</button></div><label class="checkbox"><input type="checkbox" id="setting-jokes"> Editorial jokes</label><label class="checkbox"><input type="checkbox" id="setting-radio"> Internet radio</label></section>
+   <section><h3>Focus notifications</h3><label class="checkbox"><input type="checkbox" id="chime"> Play completion chime</label><div class="settings-row"><label for="chime-volume">Chime volume</label><input id="chime-volume" type="range" min="0" max="100"><button id="chime-preview" class="soft">Preview</button></div><label class="checkbox"><input type="checkbox" id="notifications"> Desktop notifications</label></section>
+   <section><div class="settings-row"><h3>Shortcuts</h3><button id="new-shortcut" class="soft">+ Add</button></div><div id="shortcut-settings" class="shortcut-settings"></div><form id="shortcut-form" hidden><input type="hidden" id="link-id"><label for="link-name">Name</label><input id="link-name" maxlength="34" required placeholder="Website"><label for="link-url">Web address</label><input id="link-url" maxlength="500" required placeholder="https://example.com"><div class="settings-row"><button id="cancel-shortcut" type="button" class="soft">Cancel</button><button class="soft" type="submit">Save shortcut</button></div></form></section>
+   <section><h3>Backups</h3><div class="settings-row"><button id="export-data" class="soft">Export full backup</button><label for="import-data" class="soft">Import JSON</label><input type="file" accept="application/json,.json" id="import-data" class="visually-hidden"></div><p class="hint">Data stays in this browser profile. Full backups include tasks, shortcuts, preferences, radio defaults, saved city (if any) and pinned photo links, but never a live timer or stream. Import previews replacement scope and saves a local recovery snapshot.</p></section>
+   <section><h3>Services and privacy</h3><p class="hint">Online photographs arrive from Unsplash through StillTempo’s Cloudflare image service; the API key is not stored in the extension. Local image fallbacks are included; Jura is bundled locally under the SIL Open Font License. Weather: Open-Meteo and optional GeoJS. Humour: icanhazdadjoke. Audio connects to the selected broadcaster. Shortcut icons use Chrome’s native favicon service and neutral fallbacks.</p><p class="hint">Live wallpaper availability and radio-provider publication permission have not been guaranteed. Open-Meteo's free API is for non-commercial use. Please review the privacy notice and service terms before publishing.</p><p class="hint"><a href="https://unsplash.com/?utm_source=stilltempo&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash ↗</a> · <a href="https://open-meteo.com" target="_blank" rel="noopener noreferrer">Open-Meteo ↗</a></p></section>
+  </div>
+ </dialog>
+ <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+ <script type="module" src="js/app.js"></script>
+</body>
+</html>
